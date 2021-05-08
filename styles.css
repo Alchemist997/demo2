@@ -393,7 +393,7 @@ textarea, input {
 }
 
 body {
-  background-color: blue;
+  background-color: #343539;
   color: #fff;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 15px;
@@ -658,8 +658,8 @@ body {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	/* word-break: break-word; */
-	white-space: nowrap;
+	word-break: break-word;
+	/* white-space: nowrap; */
 }
 .jq-selectbox {
 	z-index: 10;
@@ -750,6 +750,7 @@ select, option, .jq-selectbox ul, li {
 	padding: 0 12px;
 	color: #000;
 	font-size: 14px;
+	font-weight: 500;
 }
 .jq-selectbox li.selected {
 	background-color: #EF483E;
