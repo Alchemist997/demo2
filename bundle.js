@@ -70,7 +70,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \***************************************************/
 /***/ (() => {
 
-eval("$('select').styler({\r\n    selectPlaceholder:'Не выбран',\r\n    selectSmartPositioning: '-1'\r\n});\n\n//# sourceURL=webpack://tochka/./src/js/select_plugin/formstyler.config.js?");
+eval("$('select').styler({\r\n    selectPlaceholder:'Не выбран'\r\n});\n\n//# sourceURL=webpack://tochka/./src/js/select_plugin/formstyler.config.js?");
 
 /***/ }),
 
