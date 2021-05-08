@@ -393,7 +393,7 @@ textarea, input {
 }
 
 body {
-  background-color: gold;
+  background-color: cyan;
   color: #fff;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 15px;
@@ -660,6 +660,7 @@ body {
 	user-select: none;
 	/* word-break: break-word; */
 	white-space: nowrap;
+	z-index: 10;
 }
 .jq-selectbox {
 	z-index: 10;
@@ -678,6 +679,7 @@ body {
 }
 .jq-selectbox__dropdown {
 	position: absolute;
+	z-index: 10;
 }
 .jq-selectbox__dropdown ul {
 	position: relative;
