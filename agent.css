@@ -12,22 +12,24 @@ ul {
 }
 
 body {
-    background-color: gray;
+    background-color: #777;
     color: #fff;
     font-family: sans-serif;
-    font-size: 7vw;
+    font-size: 6vw;
 }
 
 div {
 	margin: 0 auto;
 	margin-top: 12%;
-	padding: 20px;
-	width: 75%;
-	border: 1px solid #fff;
+	padding: 15px;
+	width: 80%;
+	background-color: #515151;
+	box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.8);
 	min-height: 100px;
 }
 p:not(:last-child) {
 	margin-bottom: 15px;
+	word-break: break-all;
 }
 
 @media (min-width: 500px) {
