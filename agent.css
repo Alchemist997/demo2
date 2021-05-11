@@ -13,12 +13,16 @@ ul {
 
 body {
     background-color: #777;
-    color: #fff;
+    color: #f7f7f7;
     font-family: sans-serif;
     font-size: 6vw;
 }
 
-div {
+p:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.mw {
 	margin: 0 auto;
 	margin-top: 12%;
 	padding: 15px;
@@ -27,16 +31,25 @@ div {
 	box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.8);
 	min-height: 100px;
 }
-p:not(:last-child) {
-	margin-bottom: 15px;
-	word-break: break-all;
+
+.iw {
+	display: flex;
 }
 
-@media (min-width: 500px) {
+.iw > div:first-child {
+	margin-right: 15px;
+	text-align: center;
+}
+
+.iw p:not(:first-child) {
+	color: #b5b5b5;
+}
+
+@media (min-width: 420px) {
 	body {
 		font-size: 20px;
 	}
-	div {
+	.mw {
 		width: 380px;
 		margin-top: 100px;
 	}
