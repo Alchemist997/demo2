@@ -10,7 +10,7 @@ let isSafari = /^((?!chrome|android|edg).)*safari/i.test(navigator.userAgent);
 if (isSafari) {
     data[0].textContent = 'Is Safari';
 } else {
-    data[0].textContent = 'Is not a Safari';
+    data[0].textContent = 'False';
 }
 
 // Get the user-agent string
@@ -18,44 +18,51 @@ let usAgStr = navigator.userAgent;
 
 // Detect Chrome
 let chromeAgent =
-usAgStr.indexOf("Chrome") > -1;
+usAgStr.indexOf('Chrome') > -1;
 
 // Detect Firefox
 let firefoxAgent =
-usAgStr.indexOf("Firefox") > -1;
+usAgStr.indexOf('Firefox') > -1;
 
 // Detect Edge
 let edgeAgent =
-usAgStr.indexOf("Edg") > -1;
+usAgStr.indexOf('Edg') > -1;
 
 // Detect Internet Explorer
 let ieAgent =
-usAgStr.indexOf("MSIE") > -1 ||
-usAgStr.indexOf("rv:") > -1;
+usAgStr.indexOf('MSIE') > -1 ||
+usAgStr.indexOf('rv:') > -1;
 // Discard IE in Firefox
 if ((ieAgent) && (firefoxAgent))
 ieAgent = false;
 
 // Detect Safari
 let safariAgent =
-usAgStr.indexOf("Safari") > -1;
+usAgStr.indexOf('Safari') > -1;
 // Discard Safari in Chrome or Edge
 if ((safariAgent) && (chromeAgent) || (edgeAgent))
 safariAgent = false;
 
 // Detect Opera
 let operaAgent =
-usAgStr.indexOf("OP") > -1;
+usAgStr.indexOf('OP') > -1;
 // Discard Chrome in Opera or Edge
 if ((chromeAgent) && (operaAgent) || (edgeAgent))
 chromeAgent = false;
 
-data[1].textContent = safariAgent;
-data[2].textContent = chromeAgent;
-data[3].textContent = firefoxAgent;
-data[4].textContent = ieAgent;
-data[5].textContent = operaAgent;
-data[6].textContent = edgeAgent;
+// Detect WebKit Safari
+let safariWK =
+usAgStr.indexOf('WebKit') > -1;
+if (!(safariAgent))
+safariWK = false;
+
+data[1].textContent = safariWK;
+data[2].textContent = safariAgent;
+data[3].textContent = chromeAgent;
+data[4].textContent = firefoxAgent;
+data[5].textContent = ieAgent;
+data[6].textContent = operaAgent;
+data[7].textContent = edgeAgent;
 
 for (let i = 0; i < data.length; i++) {
     if (data[i].textContent == 'true') {
