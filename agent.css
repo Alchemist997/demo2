@@ -27,15 +27,17 @@ p:not(:last-child) {
 	padding: 15px;
 	width: 80%;
 	background-color: #515151;
+	background-image: linear-gradient(to bottom, #515151, transparent);
 	box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.8);
 	min-height: 100px;
 }
 
 .iw {
 	display: flex;
+	justify-content: center;
 }
 
-.iw > div:first-child {
+.type {
 	margin-right: 15px;
 	text-align: center;
 }

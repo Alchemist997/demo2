@@ -10,11 +10,15 @@ let isSafari = /^((?!chrome|android|edg).)*safari/i.test(navigator.userAgent);
 if (isSafari) {
     data[0].textContent = 'Is Safari';
 } else {
-    data[0].textContent = 'False';
+    data[0].textContent = 'No';
 }
 
 // Get the user-agent string
 let usAgStr = navigator.userAgent;
+
+// Detect Chrome
+let mobile =
+usAgStr.toLowerCase().indexOf('mobile') > -1;
 
 // Detect Chrome
 let chromeAgent =
@@ -50,13 +54,7 @@ usAgStr.indexOf('OP') > -1;
 if ((chromeAgent) && (operaAgent) || (edgeAgent))
 chromeAgent = false;
 
-// Detect WebKit Safari
-let safariWK =
-usAgStr.indexOf('WebKit') > -1;
-if (!(safariAgent))
-safariWK = false;
-
-data[1].textContent = safariWK;
+data[1].textContent = mobile;
 data[2].textContent = safariAgent;
 data[3].textContent = chromeAgent;
 data[4].textContent = firefoxAgent;
