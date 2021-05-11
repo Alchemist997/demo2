@@ -23,8 +23,7 @@ p:not(:last-child) {
 }
 
 .mw {
-	margin: 0 auto;
-	margin-top: 12%;
+	margin: 12% auto;
 	padding: 15px;
 	width: 80%;
 	background-color: #515151;
@@ -51,6 +50,6 @@ p:not(:last-child) {
 	}
 	.mw {
 		width: 380px;
-		margin-top: 100px;
+		margin: 100px auto;
 	}
 }
