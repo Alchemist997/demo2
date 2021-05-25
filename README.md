@@ -1,4 +1,2 @@
-# demo2
-
-Browser test
+# Browser test
 https://alchemist997.github.io/demo2/
